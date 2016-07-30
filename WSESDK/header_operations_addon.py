@@ -99,6 +99,10 @@ agent_accelerate                                = 3315 #(agent_accelerate, <agen
 agent_set_item_slot_modifier                    = 3316 #(agent_set_item_slot_modifier, <agent_no>, <item_slot_no>, <item_modifier_no>), #Sets <agent_no>'s <item_slot_no> modifier to <item_modifier_no>
 agent_body_meta_mesh_set_vertex_keys_time_point = 3317 #(agent_body_meta_mesh_set_vertex_keys_time_point, <agent_no>, <body_meta_mesh>, <time_point>), #Sets <agent_no>'s <body_meta_mesh> vertex keys time point to <time_point>
 agent_body_meta_mesh_set_visibility             = 3318 #(agent_body_meta_mesh_set_visibility, <agent_no>, <body_meta_mesh>, <value>), #Shows (<value> = 1) or hides (<value> = 0) <agent_no>'s <body_meta_mesh>
+agent_set_personal_animation                    = 3319 #(agent_set_personal_animation, <agent_no>, <anim_no>, <anim_no>), #Replaces <agent_no>'s default <anim_no> to personal <anim_no>
+agent_get_personal_animation                    = 3320 #(agent_get_personal_animation, <destination>, <agent_no>, <anim_no>), #Stores <agent_no>'s personal <anim_no> into <destination>
+agent_set_default_animations                    = 3321 #(agent_set_default_animations, <agent_no>), #Removes <agent_no>'s personal animations
+agent_cancel_current_animation                  = 3322 #(agent_cancel_current_animation, <agent_no>, <channel_no>), #Cancels <agent_no>'s channel <2> animation
 
 multiplayer_send_chat_message_to_player      = 3400 #(multiplayer_send_chat_message_to_player, <player_no>, <sender_player_no>, <text>, [<type>]), #Sends <text> to <player_no> as a (native compatible) chat message by <sender_player_no>. Works only on servers. [<type>]: 0 = chat, 1 = team chat
 multiplayer_send_composite_message_to_player = 3401 #(multiplayer_send_composite_message_to_player, <player_no>, <message_type>, <message_register>), #Sends <message_register> with <message_type> to <player_no> (requires network_compatible = 0 in wse_settings.ini)
@@ -215,6 +219,10 @@ str_is_integer                            = 4236 #(str_is_integer, <string_1>), 
 str_store_multiplayer_profile_face_keys   = 4237 #(str_store_multiplayer_profile_face_keys, <string_register>, <profile_no>), #Stores <profile_no>'s face keys into <string_register>
 str_store_server_password_rcon            = 4238 #(str_store_server_password_rcon, <string_register>), #Stores the server RCON password into <string_register>
 str_store_item_mesh_name                  = 4239 #(str_store_item_mesh_name, <string_register>, <item_no>), #Stores the mesh name of <item_no> into <string_register>
+str_regex_match 						  = 4240 #(str_regex_match, <string_1>, <string_regex>), #Fails if <string_1> does not match <string_regex>
+str_regex_search						  = 4241 #(str_regex_search, <string_1>, <string_regex>), #Fails if <string_1> does not contain <string_regex>
+str_regex_get_matches					  = 4242 #(str_regex_get_matches, <destination>, <string_register>, <string_1>, <string_regex>, [<max>]), #Stores all matches of <string_regex> that occur in <string_1> into a range of string registers, starting from <string_register>, storing [<max>] substrings at most (default = unlimited). Stores the amount of matches into <destination>
+str_store_regex_replace					  = 4243 #(str_store_regex_replace, <string_register>, <string_1>, <string_regex>, <string_2>), #Stores <string_1> into <string_register>, replacing occurrences of <string_regex> with <string_2>
 
 options_get_verbose_casualties  = 4300 #(options_get_verbose_casualties, <destination>), #Stores verbose casualties enabled/disabled into <destination>
 options_set_verbose_casualties  = 4301 #(options_set_verbose_casualties, <value>), #Enables or disables verbose casualties
@@ -332,6 +340,7 @@ lhs_operations += [
 	agent_get_wielded_item_slot_no,
 	agent_get_scale,
 	agent_get_item_slot_flags,
+	agent_get_personal_animation,
 	multiplayer_get_cur_profile,
 	multiplayer_get_num_profiles,
 	multiplayer_cur_message_get_int,
@@ -366,6 +375,7 @@ lhs_operations += [
 	edit_mode_get_highlighted_prop_instance,
 	menu_create_new,
 	overlay_get_val,
+	str_regex_get_matches,
 ]
 
 can_fail_operations += [
@@ -403,4 +413,6 @@ can_fail_operations += [
 	fge,
 	fle,
 	presentation_activate,
+	str_regex_match,
+	str_regex_search,
 ]
