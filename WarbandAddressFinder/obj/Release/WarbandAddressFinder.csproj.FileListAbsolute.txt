@@ -1,0 +1,6 @@
+D:\Projekte\Warband\WSE\WarbandAddressFinder\bin\Release\WarbandAddressFinder.exe.config
+D:\Projekte\Warband\WSE\WarbandAddressFinder\bin\Release\WarbandAddressFinder.exe
+D:\Projekte\Warband\WSE\WarbandAddressFinder\bin\Release\WarbandAddressFinder.pdb
+D:\Projekte\Warband\WSE\WarbandAddressFinder\obj\Release\WarbandAddressFinder.csprojResolveAssemblyReference.cache
+D:\Projekte\Warband\WSE\WarbandAddressFinder\obj\Release\WarbandAddressFinder.exe
+D:\Projekte\Warband\WSE\WarbandAddressFinder\obj\Release\WarbandAddressFinder.pdb

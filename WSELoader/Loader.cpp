@@ -190,7 +190,7 @@ void Loader::Process(const CString &cmdLine)
 		//type = 1;
 		//dllName = L"WSELibSteam";
 		//break;
-	case CRC32_WARBAND_DEDICATED_1168:
+	case CRC32_WARBAND_DEDICATED_1171:
 		type = 2;
 		dllName = L"WSELibDedicated";
 		break;

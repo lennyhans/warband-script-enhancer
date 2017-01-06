@@ -428,17 +428,17 @@ unsigned int addresses::game_data_ptr = 0x009463D0;
 //unsigned int addresses::operation_Execute_jumptable = 0x004C2FC8;
 //unsigned int addresses::operation_Execute_entry = 0x004C2F36;
 //unsigned int addresses::operation_Execute_exit_1 = 0x004C2F63;
-unsigned int addresses::operation_Execute_jumptable = 0x004C76DC;
-unsigned int addresses::operation_Execute_entry = 0x004C7649;
-unsigned int addresses::operation_Execute_exit_1 = 0x004C7676;
+unsigned int addresses::operation_Execute_jumptable = 0x004C743C;
+unsigned int addresses::operation_Execute_entry = 0x004C73A9;
+unsigned int addresses::operation_Execute_exit_1 = 0x004C73D6;
 unsigned int addresses::operation_Execute_exit_2 = operation_Execute_entry + 8;
 
 //unsigned int addresses::network_server_ReceiveTeamChatEvent_entry = 0x00438340;
-unsigned int addresses::network_server_ReceiveTeamChatEvent_entry = 0x00439BB0;
+unsigned int addresses::network_server_ReceiveTeamChatEvent_entry = 0x00439680;
 unsigned int addresses::network_server_ReceiveTeamChatEvent_exit = network_server_ReceiveTeamChatEvent_entry + 6;
 
 //unsigned int addresses::network_server_ReceiveChatEvent_entry = 0x004385A0;
-unsigned int addresses::network_server_ReceiveChatEvent_entry = 0x00439E10;
+unsigned int addresses::network_server_ReceiveChatEvent_entry = 0x004396AD;
 unsigned int addresses::network_server_ReceiveChatEvent_exit = network_server_ReceiveChatEvent_entry + 6;
 
 unsigned int addresses::activate_entry = 0;
