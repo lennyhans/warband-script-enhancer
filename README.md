@@ -18,3 +18,19 @@ Modders
 This is not my code, just a mirror from mercurial repository, all credits goes to (redo) K700 and (original autor) cmpxchg8b. Thanks to them for their great work
 
 See taleworlds [forum](https://forums.taleworlds.com/index.php?threads/wb-warband-script-enhancer-v4-7-8-for-1-174.324890/)
+
+Credits:
+
+- cmpxchg8b, initial [WSE developer](http://forums.taleworlds.com/index.php/topic,151194.0.html)
+- AgentSmith, some new feature, Lua scripting support
+
+External software:
+
+- muParser
+- Open Game Protocol
+- Source RCON Protocol
+- JsonCpp
+- TinyXML-2
+- Visual Studio 2013
+- IDA Pro
+- TortoiseHg
